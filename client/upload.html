@@ -1,0 +1,53 @@
+<template name="upload">
+  <div class="page-header">
+    <a href="https://github.com/saturnapi/voronoi-partitioning">
+      <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
+    </a>
+    <center>
+      <h1>
+        <span class="glyphicon glyphicon-flash"></span>
+        Built with <a href="https://saturnapi.com/vpartition/voronoi-seed-partition-plot">SaturnAPI</a>
+      </h1>
+    </center>
+  </div>
+  <div id="class=row">
+
+   <div class="col-sm-7">
+    <figure>
+      <h3>Partition diagram</h3> 
+      <img src="/vpartition.gif" id="partition-plot" />
+      <figcaption>Seeds (yellow circles) produce the partition. Specks (black dots) are to be assigned to each partition.</figcaption>
+    </figure>
+   </div>
+
+   <div class="col-sm-4">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
+      <h4>Seeds CSV file <small><a href="/sample_seeds.csv">example file</a></small></h4>
+      <input type="file" id="seedFileInput" />
+      <pre id='seedFileInput-preview'></pre>
+    </div>
+    <br/>
+    <br/>
+    <div class="row">
+      <h4>Specks CSV file (optional) <small><a href="/sample_specks.csv">example file</a></small></h4>
+      <input type="file" id="speckFileInput">
+      <pre id='speckFileInput-preview'></pre>
+    </div>
+   </div>
+
+   <div class="col-sm-1">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <center><a class="btn btn-success disabled" id="run-partition">Run</a></center>
+   </div>
+
+  </div>
+</template>
